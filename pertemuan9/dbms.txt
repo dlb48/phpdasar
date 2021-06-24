@@ -1,0 +1,19 @@
+database : phpdasar
+tabel : mahasiswa
+
+id int Primary key auto_increment
+nama varchar (100)
+nrp char()
+email varchar(100)
+jurusan varchar(100)
+gambar varchar (100)
+
+ create table mahasiswa (
+    -> id int primary key auto_increment,
+    -> nama varchar(100),
+    -> nrp char(9),
+    -> email varchar (100),
+    -> jurusan varchar(100),
+    -> gambar varchar (100)
+    -> );
+MariaDB [phpdasar]> describe mahasiswa;
