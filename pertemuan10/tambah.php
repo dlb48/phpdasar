@@ -5,11 +5,19 @@ if(isset($_POST["submit"]) ) {
 
 //cek apakah data berhasil ditambah atau tidak    
 if (tambah ($_POST) > 0) {
-    echo "data berhasil ditambahkan";
+    echo " 
+        <script>
+        alert('data berhasil ditambahkan!');
+        document.location.href = 'index.php';
+        </script>
+    ";
 }else {
-    echo "data gagal ditambahkan";
-    echo "<br>";
-    echo mysqli_error($conn);
+    echo " 
+        <script>
+        alert('data gagal ditambahkan!');
+        document.location.href = '';
+        </script>
+    ";
 }
 
 }
@@ -27,15 +35,15 @@ if (tambah ($_POST) > 0) {
         <ul>
             <li>
                 <label for="nrp">NRP :</label>
-                <input type="text" name="nrp" id="nrp">
+                <input type="text" name="nrp" id="nrp" required>
             </li>
             <li>
                 <label for="nama">Nama :</label>
-                <input type="text" name="nama" id="nama">
+                <input type="text" name="nama" id="nama" required>
             </li>
             <li>
                 <label for="jurusan">jurusan :</label>
-                <input type="text" name="jurusan" id="jurusan">
+                <input type="text" name="jurusan" id="jurusan" required>
             </li>
             <li>
                 <label for="email">Email :</label>

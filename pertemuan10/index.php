@@ -30,7 +30,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
     <td><?= $i; ?></td>
     <td>
         <a href="">ubah</a> |
-        <a href="">Hapus</a>
+        <a href="hapus.php?id= <?=$row["id"] ?>">Hapus</a>
     </td>
     <td><img src="img/<?=$row["gambar"]?>" width="50"></td>
     <td><?=$row["nrp"]?></td>

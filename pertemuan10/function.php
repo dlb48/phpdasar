@@ -19,19 +19,27 @@ function query ($query){
 
 function tambah ($data) {
      global $conn;
-     $nrp = $data["nrp"];
-     $nama = $data["nama"];
-     $email = $data["email"];
-     $jurusan = $data["jurusan"];
-     $gambar = $data["gambar"];
+     $nrp = htmlspecialchars($data["nrp"]);
+     $nama = htmlspecialchars($data["nama"]);
+     $email = htmlspecialchars($data["email"]);
+     $jurusan = htmlspecialchars($data["jurusan"]);
+     $gambar = htmlspecialchars($data["gambar"]);
 
-     $query = "INSERT INTO mahasiswa
-                 VALUES ('','$nama','$nrp','$email','$jurusan','$gambar')
+     $query = "INSERT INTO mahasiswa (`nama`, `nrp`, `email`, `jurusan`, `gambar`)
+                 VALUES ('$nama','$nrp','$email','$jurusan','$gambar')
                 ";
 
      mysqli_query($conn, $query);
 
      return mysqli_affected_rows($conn);
+}
+
+function hapus ($id){
+    global $conn;
+    $query = "DELETE FROM mahasiswa WHERE id=$id";
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
 }
 
 ?>
