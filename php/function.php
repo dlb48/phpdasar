@@ -64,8 +64,27 @@ $variablefunction = "hay";
 $variablefunction("soleh");
 
 
+echo "<hr>";
 
+//menggabungkan array jadi string
+var_dump(join(",", [10,11,12,13,14,15]));
+//memecah string jadi array
+var_dump(explode("/","nur/ahmad/soleh"));
+//menghapus depan dan belakang dari nilai
+var_dump(trim ("  home        "));
+//mengambil nilai sesuai value dari 0,1,2 dst
+var_dump(substr("nur ahmad soleh",0,3));
 
+echo "<hr>";
+
+//mengambil semua keys milik array array_keys()
+//mengambil semua value milik array array_values()
+
+//require memanggil file.php jika file tidak ada maka akan error
+//include hampir sama seperti require tetapi jika file yang di panggil tidak ada 
+//maka hanya akan memberi peringatan dan program tetap di jalankan.
+//require_once bisa mendeteksi jika file pernah di panggil, , jika memanggil 2 kali
+//maka yang di jalankan hanya sekali. jika tidak pake once maka akan di panggil berkali2.
 
 
 
